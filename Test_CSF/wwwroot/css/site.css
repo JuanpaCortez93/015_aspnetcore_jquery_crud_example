@@ -156,7 +156,7 @@ main {
     display: block;
 }
 
-form__message-success-link {
+.form__message-success-link {
     font-size: 2rem;
     color: #119200;
     padding-top: 20px;
