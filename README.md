@@ -12,5 +12,5 @@ Important, to migrate Databases Models:
 1. Open Nuget's Console
 2. Write the following commands:
 
-Add-Migration 'InitialMigration'
-Update-Database
+* Add-Migration 'InitialMigration'
+* Update-Database
