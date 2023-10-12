@@ -1,0 +1,82 @@
+﻿@model UsersModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <h1 class="card-title title">Please, enter the following information</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <form action="" class="form" id="userForm">
+                <!-- FirstName -->
+                <div class="form__group" id="user__firstname">
+                    <label for="FirstName" class="form__label">First Name</label>
+                    <div class="form__group-input">
+                        <input asp-for="FirstName" type="text" class="form__input" autocomplete="off" name="FirstName" id="FirstName" placeholder="Enter your first name here">
+                        <i class="fa fa-times-circle-o form__validation-state inactive" aria-hidden="true"></i>
+                    </div>
+                    <p class="form__input-error">At least more than 2 characters, use Capitalize, no more than two names (eg. Juan)</p>
+                </div>
+
+                <!-- LastName -->
+                <div class="form__group" id="user__lastname">
+                    <label for="name" class="form__label">Name</label>
+                    <div class="form__group-input">
+                        <input asp-for="LastName" type="text" class="form__input" autocomplete="off" name="LastName" id="LastName" placeholder="Enter your last name here">
+                        <i class="fa fa-times-circle-o form__validation-state inactive" aria-hidden="true"></i>
+                    </div>
+                    <p class="form__input-error">At least more than 2 characters, use Capitalize, no more than two names</p>
+                </div>
+
+                <!-- Password -->
+                <div class="form__group" id="user__password">
+                    <label for="password" class="form__label">Password</label>
+                    <div class="form__group-input">
+                        <input asp-for="Password" type="password" class="form__input" autocomplete="off" name="Password" id="Password" placeholder="Enter your password here">
+                        <i class="fa fa-times-circle-o form__validation-state inactive" aria-hidden="true"></i>
+                    </div>
+                    <p class="form__input-error">Between 8 and 16 digits. At least one especial character</p>
+                </div>
+
+                <!-- Password verify-->
+                <div class="form__group" id="user__password2">
+                    <label for="password2" class="form__label">Repeat password</label>
+                    <div class="form__group-input">
+                        <input asp-for="ConfirmPassword" type="password" class="form__input" autocomplete="off" name="ConfirmPassword" id="ConfirmPassword" placeholder="Repeat your password here">
+                        <i class="fa fa-times-circle-o form__validation-state inactive" aria-hidden="true"></i>
+                    </div>
+                    <p class="form__input-error">Passwords must be equal.</p>
+                </div>
+
+                <!-- Email -->
+                <div class="form__group form__group_email" id="user__email">
+                    <label for="email" class="form__label">Email</label>
+                    <div class="form__group-input">
+                        <input asp-for="Email" type="email" class="form__input" autocomplete="off" name="Email" id="Email" placeholder="Enter your email here">
+                        <i class="fa fa-times-circle-o form__validation-state inactive" aria-hidden="true"></i>
+                    </div>
+                    <p class="form__input-error">User's email must have the sing @@ and at least a extension .com/.edu/.org (eg. juanpa@email.com.ec)</p>
+                </div>
+                    
+                <!-- Submit -->
+                <div class="form__message" id="form__message">
+                    <p><i class="fa fa-triangle-exclamation"></i> <b>Error: </b>Fill out the form as well as required</p>
+                </div>
+
+                <!-- Send Info -->
+                <div class="form__group form__group-btn-send">
+                    <button id="submitBtn"  type="submit" class="form__btn">Send information</button>
+                    <p class="form__message-success">Sending information to the Database<br />Wait just two seconds...</p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+</div>
